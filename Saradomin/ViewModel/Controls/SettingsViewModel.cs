@@ -38,6 +38,9 @@ namespace Saradomin.ViewModel.Controls
             {
                 switch (Client.GameServerAddress)
                 {
+                    case ClientSettings.DarkOwlServerAddress:
+                        return ClientSettings.ServerProfile.DarkOwlServer;
+
                     case ClientSettings.LiveServerAddress:
                         return ClientSettings.ServerProfile.Live;
 
@@ -63,6 +66,7 @@ namespace Saradomin.ViewModel.Controls
 
         public ObservableCollection<EnumDescription> ServerProfiles { get; private set; } = new()
         {
+            ClientSettings.ServerProfile.DarkOwlServer.ToDescription(),
             ClientSettings.ServerProfile.Live.ToDescription(),
             ClientSettings.ServerProfile.Testing.ToDescription(),
             ClientSettings.ServerProfile.Local.ToDescription()

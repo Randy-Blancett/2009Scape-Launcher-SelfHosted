@@ -8,12 +8,16 @@ namespace Saradomin.Model.Settings.Client
     {
         public const string FileName = "config.json";
 
+        public const string DarkOwlServerAddress = "10.0.0.16";
         public const string LiveServerAddress = "play.2009scape.org";
         public const string TestServerAddress = "test.2009scape.org";
         public const string LocalServerAddress = "localhost";
 
         public enum ServerProfile
         {
+            [Description("DarkOwl Testing Server;10.0.0.16")]
+            DarkOwlServer,
+
             [Description("Stable server;play.2009scape.org")]
             Live,
             
