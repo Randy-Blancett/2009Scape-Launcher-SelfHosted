@@ -75,6 +75,16 @@ namespace Saradomin.Infrastructure.Services
                     WorldListServerPort = 43595,
                     CacheServerPort = 43595
                 },
+               
+                new()
+                {
+                    Name = "DarkOwl's Testing Server",
+                    ManagementServerAddress = "10.0.0.16",
+                    GameServerAddress = "10.0.0.16",
+                    GameServerPort = 43594,
+                    WorldListServerPort = 43595,
+                    CacheServerPort = 43595
+                },
             };
         }
     }
