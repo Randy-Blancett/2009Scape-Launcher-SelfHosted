@@ -6,7 +6,6 @@ on:
 
 env:
   DEFAULT_BRANCH: "refs/heads/master"
-  NODE_EXTRA_CA_CERTS: /etc/ssl/certs/DarkOwl_Root_CA.pem
   COMMON_FLAGS: -p:PublishTrimmed=false -p:PublishReadyToRun=true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true
   OUTPUT_FILE_PREFIX: 2009scape-launcher
   OUTPUT_DIR: ./output
@@ -44,7 +43,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: Linux Launcher
-          path: ${{ env.OUTPUT_DIR }}
+          path: ${{ env.OUTPUT_DIR }}/
           retention-days: 5
 
       # - name: Publish Windows Files
