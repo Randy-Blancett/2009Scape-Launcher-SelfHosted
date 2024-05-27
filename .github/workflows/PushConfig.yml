@@ -39,6 +39,9 @@ jobs:
           dotnet publish --runtime linux-x64 --self-contained -c Release $COMMON_FLAGS
           mv -v $PUBLISH_DIR_LINUX64/Saradomin ${{ env.OUTPUT_DIR }}/${{ env.OUTPUT_FILE_PREFIX }}-sc
 
+      - run: ls 
+      - run: ls ${{ env.OUTPUT_DIR }}
+      
       - name: Upload Linux Files
         uses: actions/upload-artifact@v3
         with:
