@@ -1,5 +1,5 @@
 name: Create Artifacts
-run-name: ${{ gitea.actor }} is creating Artifacts
+run-name: ${{ github.actor }} is creating Artifacts
 on:
   - push
   - workflow_dispatch
@@ -20,9 +20,6 @@ jobs:
         dotnet-version: ["8.0.x"]
 
     steps:
-      - name: Setup Certificates
-        run: |
-          echo "${{ vars.DARK_OWL_CA_LOC }}" > /etc/ssl/certs/DarkOwl_Root_CA.pem
       - uses: actions/checkout@v4
         with:
           submodules: "recursive"
