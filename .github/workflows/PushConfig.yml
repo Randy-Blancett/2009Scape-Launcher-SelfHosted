@@ -36,7 +36,7 @@ jobs:
         run: |
           mkdir -p ../output
           dotnet publish --runtime linux-x64 --self-contained -c Release $COMMON_FLAGS
-          mv -v $PUBLISH_DIR_LINUX64/Saradomin ../output/${{ env.OUTPUT_FILE_PREFIX }}-sc
+          mv -v $PUBLISH_DIR_LINUX64/Saradomin ../output/linux/${{ env.OUTPUT_FILE_PREFIX }}-sc
 
       - run: ls 
       - run: ls output
@@ -45,19 +45,19 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: Linux Launcher
-          path: output
+          path: output/linux
           retention-days: 5
 
-      # - name: Publish Windows Files
-      #   working-directory: ./Saradomin
-      #   run: |
-      #     mkdir -p /output/windows
-      #     dotnet publish --runtime win-x64 --self-contained -c Release $COMMON_FLAGS
-      #     mv -v $PUBLISH_DIR_WIN64/Saradomin.exe /output/windows/$OUTPUT_FILE_PREFIX-sc.exe
+      - name: Publish Windows Files
+        working-directory: ./Saradomin
+        run: |
+          mkdir -p /output/windows
+          dotnet publish --runtime win-x64 --self-contained -c Release $COMMON_FLAGS
+          mv -v $PUBLISH_DIR_WIN64/Saradomin.exe ../output/windows/$OUTPUT_FILE_PREFIX-sc.exe
 
-      # - name: Upload Windows Files
-      #   uses: actions/upload-artifact@v3
-      #   with:
-      #     name: Windows Launcher
-      #     path: /output/windows
-      #     retention-days: 5
+      - name: Upload Windows Files
+        uses: actions/upload-artifact@v3
+        with:
+          name: Windows Launcher
+          path: output/windows
+          retention-days: 5
