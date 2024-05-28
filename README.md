@@ -14,6 +14,9 @@ Linux: [Get it on Flathub](https://flathub.org/apps/details/org._2009scape.Launc
 
 Windows: [Self Contained](https://gitlab.com/2009scape/Saradomin-Launcher/-/jobs/artifacts/master/raw/Saradomin/2009scape-launcher-sc.exe?job=pack_windows_sc) | [No Runtime](https://gitlab.com/2009scape/Saradomin-Launcher/-/jobs/artifacts/master/raw/Saradomin/2009scape-launcher-no_rt.exe?job=pack_windows_no_rt)
 
+## Prerequisets
+* Must have java installed on the machine.
+
 ## Authors
 
 - [@vddCore](https://www.gitlab.com/vddcore) (Vast majority of the work)
