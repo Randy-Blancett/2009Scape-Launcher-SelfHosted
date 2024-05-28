@@ -28,7 +28,7 @@ namespace Saradomin.ViewModel.Windows
 
         private LauncherSettings Launcher { get; }
 
-        public string Title { get; set; } = "2009scape launcher";
+        public string Title { get; set; } = "DarkOwl's RuneScape Launcher";
         
         public bool CanLaunch { get; private set; } = true;
         public string LaunchText { get; private set; } = "Play!";

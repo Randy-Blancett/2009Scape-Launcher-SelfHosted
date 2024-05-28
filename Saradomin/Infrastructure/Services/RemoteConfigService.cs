@@ -78,9 +78,9 @@ namespace Saradomin.Infrastructure.Services
                
                 new()
                 {
-                    Name = "DarkOwl's Testing Server",
-                    ManagementServerAddress = "10.0.0.16",
-                    GameServerAddress = "10.0.0.16",
+                    Name = "DarkOwl's Server",
+                    ManagementServerAddress = "runescape.home.darkowl.org",
+                    GameServerAddress = "runescape.home.darkowl.org",
                     GameServerPort = 43594,
                     WorldListServerPort = 43595,
                     CacheServerPort = 43595
