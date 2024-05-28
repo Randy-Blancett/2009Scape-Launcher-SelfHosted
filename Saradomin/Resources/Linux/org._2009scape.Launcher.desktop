@@ -1,9 +1,9 @@
 [Desktop Entry]
 Type=Application
 Terminal=false
-Name=2009scape
-GenericName=2009scape Launcher
-Comment=2009scape Launcher is a free, open-source launcher for Runescape 2009 compatible servers
+Name=DarkOwl's RuneScape
+GenericName=DarkOwl's RuneScape Launcher
+Comment=DarkOwl's modified Version of 2009scape Launcher is a free, open-source launcher for Runescape 2009 compatible servers
 Keywords=game;runescape;2009scape;osrs;saradomin
 Exec=2009scape-launcher
 Icon=org._2009scape.Launcher

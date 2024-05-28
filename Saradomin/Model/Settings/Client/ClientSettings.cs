@@ -15,7 +15,7 @@ namespace Saradomin.Model.Settings.Client
 
         public enum ServerProfile
         {
-            [Description("DarkOwl Testing Server;runescape.home.darkowl.org")]
+            [Description("DarkOwl Server;runescape.home.darkowl.org")]
             DarkOwlServer,
 
             [Description("Stable server;play.2009scape.org")]
