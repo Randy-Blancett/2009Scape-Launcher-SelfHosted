@@ -53,7 +53,6 @@ jobs:
       - name: Publish Windows Files
         working-directory: ./Saradomin
         run: |
-          mkdir -p /output/windows
           dotnet publish --runtime win-x64 --self-contained -c Release $COMMON_FLAGS
           mv -v $PUBLISH_DIR_WIN64/Saradomin.exe ../output/windows/$OUTPUT_FILE_PREFIX-sc.exe
 
