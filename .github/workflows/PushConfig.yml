@@ -30,6 +30,11 @@ jobs:
         run: dotnet --version
       - name: Install dependencies
         run: dotnet restore
+      
+      - name: Add Required Folders
+        run: |
+          mkdir -p output/linux
+          mkdir -p output/windows
 
       - name: Publish Linux Files
         working-directory: ./Saradomin
@@ -37,9 +42,6 @@ jobs:
           mkdir -p ../output
           dotnet publish --runtime linux-x64 --self-contained -c Release $COMMON_FLAGS
           mv -v $PUBLISH_DIR_LINUX64/Saradomin ../output/linux/${{ env.OUTPUT_FILE_PREFIX }}-sc
-
-      - run: ls 
-      - run: ls output
 
       - name: Upload Linux Files
         uses: actions/upload-artifact@v3
