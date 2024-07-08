@@ -183,10 +183,13 @@ namespace Saradomin.Utilities
 
         public static string Get2009scapeHome()
         {
-            Console.WriteLine("Test123");
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux)
                 || RuntimeInformation.IsOSPlatform(OSPlatform.FreeBSD))
             {
+                Console.WriteLine(Path.Combine(
+                    LocateUnixUserHome(),
+                    "2009scape"
+                ));
                 return Path.Combine(
                     LocateUnixUserHome(),
                     "2009scape"
@@ -202,6 +205,7 @@ namespace Saradomin.Utilities
                     Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
                     "2009scape"
                 );
+                Console.WriteLine(Directory.Exists(userProfile) ? userProfile : appData);
                 return Directory.Exists(userProfile) ? userProfile : appData;
             }
         }
