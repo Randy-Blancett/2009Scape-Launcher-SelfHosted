@@ -183,6 +183,7 @@ namespace Saradomin.Utilities
 
         public static string Get2009scapeHome()
         {
+            Console.WriteLine("Test123");
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux)
                 || RuntimeInformation.IsOSPlatform(OSPlatform.FreeBSD))
             {
